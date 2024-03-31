@@ -1,0 +1,23 @@
+---
+interface Props {
+  title: string;
+  description: string;
+}
+const { title, description }: Props = Astro.props;
+---
+<div>
+  <div class="relative w-full">
+    <div class="w-full h-3/4 rounded-md bg-gradient-to-l from-fm_gradient_from to-fm_gradient_to"/>
+    <picture>
+      <img src="/assets/images/image-man-eating.webp" alt="man eating">
+    </picture>
+  </div>
+  <div class="py-6 flex flex-col gap-6">
+    <div>
+      <h2  class="font-semibold text-fm_gunmetal text-[32px] leading-9 tracking-tight">{title}</h2>
+    </div>
+    <div class="text-fm_dark_electric_blue text-base ">
+      <p>{description}</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+---
+interface Props {
+  customClass?: string;
+}
+const { customClass } : Props = Astro.props;
+---
+<section class={`px-6 w-full ${customClass}`}>
+  <slot></slot>
+</section>

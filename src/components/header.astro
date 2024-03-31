@@ -1,0 +1,23 @@
+---
+import Wrapper from './wrapper.astro'
+import MainInfo from './main-info.astro'
+import Form from './form.astro'
+interface Props {
+  title: string
+  description: string
+}
+const {title,description} =  Astro.props
+---
+<section>
+  <div class="bg-gradient-to-br from-fm_gradient_from to-fm_gradient_to rounded-b-[35px] pb-[156px] pt-6">
+    <Wrapper>
+      <MainInfo title={title} description={description}/>
+    </Wrapper>
+  </div>
+  <Wrapper>
+    <div class="py-6 mt-[-140px]">
+      <Form/>
+    </div>
+  </Wrapper>  
+
+</section>
