@@ -9,7 +9,19 @@ interface Props {
 const {title,description} =  Astro.props
 ---
 <section>
-  <div class="bg-gradient-to-br from-fm_gradient_from to-fm_gradient_to rounded-b-[35px] pb-[156px] pt-6">
+  <div class="relative hidden xl:block">
+    <div class="absolute bg-gradient-to-br from-fm_gradient_from to-fm_gradient_to rounded-b-[35px] w-9/12 h-full top-0 left-2 z-[-1]"></div>
+    <Wrapper customClass='flex flex-row gap-16'>
+      <div class="flex-1">
+        <MainInfo title={title} description={description}/>
+      </div>
+      <div class="flex-1 py-40">
+        <Form/>
+      </div>
+    </Wrapper>
+  </div>
+<div class="block xl:hidden">
+  <div class="bg-gradient-to-br from-fm_gradient_from to-fm_gradient_to rounded-b-[35px] pb-[156px] pt-6 ">
     <Wrapper>
       <MainInfo title={title} description={description}/>
     </Wrapper>
@@ -19,5 +31,7 @@ const {title,description} =  Astro.props
       <Form/>
     </div>
   </Wrapper>  
+</div>
+
 
 </section>

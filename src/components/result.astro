@@ -7,7 +7,7 @@ interface Props {
 const { value, range,classification }: Props = Astro.props;
 ---
 
-<div class="w-full rounded-lg bg-fm_blue p-8 text-white flex flex-col gap-8">
+<div class="w-full rounded-lg bg-fm_blue p-8 text-white flex flex-col gap-8 lg:flex-row lg:gap-16 lg:rounded-r-full">
   <div class="flex flex-col gap-3">
     <div class="text-base font-bold">
       Your BMI is ...
@@ -17,7 +17,7 @@ const { value, range,classification }: Props = Astro.props;
     </div>
   </div>
 
-  <div>
+  <div class="flex items-center">
     <p class="text-sm">
       Your BMI suggests you're <span>{classification}</span>. Your ideal weight is between <span class="font-semibold">{range}</span>
     </p>

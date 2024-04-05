@@ -6,16 +6,18 @@ interface Props {
 }
 const {title,description} =  Astro.props
 ---
-      <div class="flex flex-col justify-center items-center gap-8">
+      <div class="flex flex-col justify-center items-center gap-8 xl:pt-[74px] xl:items-start xl:gap-24">
         <picture class="flex justify-center items-center">
-         <img src="/assets/images/logo.svg" alt="logo" class="w-10 h-10">
+         <img src="/assets/images/logo.svg" alt="logo" class="w-10 h-10 lg:w-16 lg:h-16">
         </picture>
-        <div class="flex justify-center">
-         <h1 class="font-semibold text-5xl text-fm_gunmetal text-center max-w-64 sm:max-w-[380px]">
-           {title}
-         </h1>
-        </div>
-        <div class="">
-         <p class="text-center text-base text-fm_dark_electric_blue" >{description}</p>
+        <div class="flex flex-col justify-center items-center gap-8 xl:pt-[74px] xl:items-start">
+          <div class="flex justify-center">
+           <h1 class="font-semibold text-5xl text-fm_gunmetal tracking-tighter text-center max-w-64 sm:max-w-[380px] xl:text-left xl:text-[64px] xl:max-w-[465px]" >
+             {title}
+           </h1>
+          </div>
+          <div class="">
+           <p class="text-center text-base text-fm_dark_electric_blue xl:text-m xl:text-left xl:max-w-[465px]"  >{description}</p>
+          </div>
         </div>
       </div>
