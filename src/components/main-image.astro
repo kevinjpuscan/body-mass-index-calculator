@@ -5,15 +5,15 @@ interface Props {
 }
 const { title, description }: Props = Astro.props;
 ---
-<div class="mb-16 sm:mb-24 sm:flex sm:gap-16">
-  <div class="relative w-full sm:flex-1 sm:ml-[-8rem]">
+<div class="mb-16 sm:mb-24 sm:flex sm:gap-16 lg:gap-32">
+  <div class="relative w-full sm:flex-1 sm:ml-[-8rem] lg:ml-0">
     <picture>
       <img src="/assets/images/image-man-eating.webp" alt="man eating">
     </picture>
   </div>
-  <div class="py-6 flex flex-col gap-6 sm:flex-1">
+  <div class="py-6 flex flex-col gap-6 sm:flex-1 lg:justify-end">
     <div>
-      <h2  class="font-semibold text-fm_gunmetal text-[32px] leading-9 tracking-tight">{title}</h2>
+      <h2  class="font-semibold text-fm_gunmetal text-[32px] leading-9 tracking-tight lg:text-[48px] lg:leading-10">{title}</h2>
     </div>
     <div class="text-fm_dark_electric_blue text-base ">
       <p>{description}</p>
